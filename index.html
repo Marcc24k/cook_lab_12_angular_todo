@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="todoMod">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook lab 12 | To do list</title>
+
+    <!--	<link rel="stylesheet" href="css/normalize.css">-->
+
+
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Righteous" rel="stylesheet">
+
+
+
+</head>
+
+<body ng-controller="todoController" title="Move the list if you would like to enjoy the view.">
+
+    <div id="container" class="ui-widget-content">
+        <h1>To Do List</h1>
+        <input type="text" placeholder="Filter" ng-model="choreFilter">
+        <button ng-click="onclick(choreToAdd)">Filter</button>
+       
+        
+        <ul>
+            <li ng-repeat="chore in chores | filter: choreFilter track by $index">
+                <button class="clear_button" ng-click="removeChore(chore)">X</button>
+                {{chore}}
+            </li>
+        </ul>
+        <form>
+            <input type="text" ng-model="choreToAdd">
+            <button type="submit" ng-click="onclick(choreToAdd)">Add</button>
+    </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src='js/angular.min.js'></script>
+    <script src='js/script.js'></script>
+</body>
+
+</html>
