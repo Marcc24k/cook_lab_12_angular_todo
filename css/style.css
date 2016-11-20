@@ -23,11 +23,12 @@ body {
 
 h1 {
     position: relative;
-    left: 35%;
+    left: 30%;
     width: 35%;
     border: 2px solid transparent;
     border-bottom-color: mediumpurple;
     color: orangered;
+    text-align: center;
 }
 
 ul {
@@ -53,13 +54,13 @@ li {
 
 button {
     position: relative;
-    left: 30%;
+    left: 32%;
     top: 30%;
 }
 
 input {
     position: relative;
-    left: 30%;
+    left: 32%;
     top: 30%;
 }
 
